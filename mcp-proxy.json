@@ -9,33 +9,32 @@
       "logEnabled": true
     }
   },
+{
+  "mcpProxy": {
+    "baseURL": "https://mcp.example.com",
+    "addr": ":9000",
+    "name": "MCP Proxy",
+    "version": "1.0.0",
+    "options": {
+      "panicIfInvalid": true,
+      "logEnabled": true
+    }
+  },
   "mcpServers": {
     "fetch": {
       "command": "docker",
       "args": [
-        "run",
+        "exec",
         "-i",
-        "--rm",
-        "mcp/fetch",
-        "--ignore-robots-txt"
+        "mcp-fetch"
       ]
     },
     "youtube_transcript": {
       "command": "docker",
       "args": [
-        "run",
+        "exec",
         "-i",
-        "--rm",
-        "mcp/youtube-transcript"
-      ]
-    },
-    "time": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "mcp/time"
+        "mcp-youtube-transcript"
       ]
     }
   }
