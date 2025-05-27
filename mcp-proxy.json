@@ -1,6 +1,6 @@
 {
   "mcpProxy": {
-    "baseURL": "https://mcp.example.com",
+    "baseURL": "http://projectlokey.space:9000",
     "addr": ":9000",
     "name": "MCP Proxy",
     "version": "1.0.0",
