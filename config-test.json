@@ -1,23 +1,14 @@
 {
   "mcpServers": {
-    "apify": {
+    "fetch": {
       "command": "docker",
       "args": [
         "run",
         "-i",
         "--rm",
-	      "-e",
-	      "APIFY_TOKEN",
-	      "-e",
-	      "APIFY_META_ORIGIN",
-        "ghcr.io/alexleducanh/apify-actors-mcp-server",
-        "--actors",
-        "apify/instagram-hashtag-scraper,apify/instagram-comment-scraper,kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest,streamers/youtube-scraper,streamers/youtube-comments-scraper,clockworks/tiktok-scraper,clockworks/tiktok-comments-scraper,apify/facebook-comments-scraper,trudax/reddit-scraper-lite"
-      ],
-      "env": {
-        "NASA_API_KEY": "apify_api_FKfvfS1BVnomQwjBuGeYeE1FrPpKdz2SA684",
-        "APIFY_META_ORIGIN": "STANDBY"
-      }
+        "mcp/fetch",
+        "--ignore-robots-txt"
+      ]
     }
   }
 }
