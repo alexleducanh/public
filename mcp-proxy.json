@@ -11,6 +11,7 @@
   },
   "mcpServers": {
     "fetch": {
+      "type": "stdio",
       "command": "docker",
       "args": [
         "exec",
@@ -19,6 +20,7 @@
       ]
     },
     "youtube_transcript": {
+      "type": "stdio",
       "command": "docker",
       "args": [
         "exec",
