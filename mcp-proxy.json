@@ -1,6 +1,6 @@
 {
   "mcpProxy": {
-    "baseURL": "http://localhost",
+    "baseURL": "http://localhost:9000",
     "addr": ":9000",
     "name": "MCP Proxy",
     "version": "1.0.0",
@@ -11,21 +11,21 @@
   },
   "mcpServers": {
     "fetch": {
-      "type": "stdio",
       "command": "docker",
       "args": [
-        "exec",
+        "run",
         "-i",
-        "mcp-fetch"
+        "--rm",
+        "mcp/fetch"
       ]
     },
     "youtube_transcript": {
-      "type": "stdio",
       "command": "docker",
       "args": [
-        "exec",
+        "run",
         "-i",
-        "mcp-youtube-transcript"
+        "--rm",
+        "mcp/youtube-transcript"
       ]
     }
   }
